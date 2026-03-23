@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-banner.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-main.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 Repositorio de análisis productivo y evaluación económica del proyecto. Abarca el cálculo de indicadores de desempeño (OEE, Takt time, MLT), simulación de producción, análisis financiero (VPN, TIR, flujo de caja) y desarrollo de dashboards con Power BI.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 📁 Estructura del Repositorio
@@ -62,7 +62,7 @@ ulogix-data-finance/
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 📊 Indicadores Clave
@@ -78,7 +78,7 @@ ulogix-data-finance/
 | **Payback** | Periodo de recuperación de inversión | Excel |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 🏭 Productos Analizados
@@ -90,21 +90,21 @@ ulogix-data-finance/
 | Jugo natural | Línea 7 | 20 L GV | ≥ 75% |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 👥 Responsables
 
 | Módulo | Responsable | GitHub |
 |---|---|---|
-| Finanzas / Análisis Económico | Samuel D. Sánchez | [@samsanchezcar](https://github.com/samsanchezcar) |
+| Finanzas / Análisis Económico | Samuel David Sanchez Cardenas | [@samsanchezcar](https://github.com/samsanchezcar) |
 | Planeación de Proceso / OEE | Jorge N. Garzón | [@Nicolas-Eule](https://github.com/Nicolas-Eule) |
 | SCADA / MES / Power BI | Juan F. Triana | [@jutrianaa](https://github.com/jutrianaa) |
 
 **Supervisores académicos:** Carlos J. Cortés · Luis M. Méndez · Víctor H. Grisales · Ricardo Ramírez · Ubaldo García · Eduardo Barrera
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 ## 🔗 Repositorios Relacionados
@@ -114,5 +114,5 @@ ulogix-data-finance/
 - [ulogix-team.github.io](https://ulogix-team.github.io) — Sitio web del proyecto
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-banner.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
 </p>

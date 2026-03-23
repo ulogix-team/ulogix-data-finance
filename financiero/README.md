@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section.svg" width="100%"/>
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 </p>
 
 # 💰 Financiero — Análisis Económico del Proyecto
@@ -15,5 +15,5 @@ Evaluación técnico-económica que sustenta la viabilidad de la automatización
 
 ## Responsable
 
-Samuel D. Sánchez · [@samsanchezcar](https://github.com/samsanchezcar)  
+Samuel David Sanchez Cardenas · [@samsanchezcar](https://github.com/samsanchezcar)  
 Jorge N. Garzón · [@Nicolas-Eule](https://github.com/Nicolas-Eule)
