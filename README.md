@@ -22,12 +22,12 @@ Repositorio de análisis productivo y evaluación económica. Abarca el cálculo
 
 ```
 ulogix-data-finance/
-├── oee/              OEE por línea y producto, scripts Python
-├── tiempos/          Takt time, tiempos de setup, MLT
-├── simulacion/       Modelos de simulación, análisis comparativo
-├── financiero/       EDT, presupuesto, flujo de caja, VPN/TIR
-├── power-bi/         Dashboards MES (.pbix) y datasets
-└── reportes/         Informes consolidados
+├── oee/          OEE por línea y producto, scripts Python
+├── tiempos/      Takt time, tiempos de setup, MLT
+├── simulacion/   Modelos de simulación, análisis comparativo
+├── financiero/   EDT, presupuesto, flujo de caja, VPN/TIR
+├── power-bi/     Dashboards MES (.pbix) y datasets
+└── reportes/     Informes consolidados
 ```
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
@@ -67,9 +67,11 @@ ulogix-data-finance/
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## Repositorios Relacionados
+## Flujo de Trabajo
 
-- [ulogix-manufacturing](https://github.com/ulogix-team/ulogix-manufacturing) — Proceso, planta, gemelo digital
-- [ulogix-scada-control](https://github.com/ulogix-team/ulogix-scada-control) — Datos en tiempo real desde SCADA
+```
+main ──────────────────► producción estable
+  └── develop ─────────► integración y desarrollo
+```
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

@@ -11,7 +11,7 @@ Dashboards de Manufacturing Execution System (MES) con Power BI, conectados a da
 ## Contenido esperado
 
 - `reportes/` — Archivos `.pbix` con dashboards de producción, calidad y eficiencia
-- `datasets/` — Archivos de datos fuente (`.csv`, `.xlsx`, conectores OPC/SQL)
+- `datasets/` — Fuentes de datos (`.csv`, `.xlsx`, conectores OPC/SQL)
 
 ## Responsable
 

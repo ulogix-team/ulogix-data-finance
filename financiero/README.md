@@ -10,10 +10,10 @@ Evaluación técnico-económica que sustenta la viabilidad de la automatización
 
 ## Contenido esperado
 
-- `presupuesto/` — EDT detallado y presupuesto por módulo (hardware, software, ingeniería)
-- `flujo-caja/` — Proyecciones mensuales/anuales de flujo de caja
-- `indicadores/` — Cálculo de VPN, TIR, periodo de payback
-- `propuesta-valor/` — Documento de oferta comercial y diferencial competitivo
+- `presupuesto/` — EDT detallado y presupuesto por módulo
+- `flujo-caja/` — Proyecciones de flujo de caja
+- `indicadores/` — VPN, TIR, periodo de payback
+- `propuesta-valor/` — Oferta comercial y diferencial competitivo
 
 ## Responsables
 
