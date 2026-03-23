@@ -1,118 +1,75 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Power%20BI-MES%20Analytics-7C3AED?style=flat-square&logo=powerbi"/>
+  <img src="https://img.shields.io/badge/Power_BI-MES_Analytics-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Python-Análisis%20de%20Datos-a855f7?style=flat-square&logo=python"/>
+  <img src="https://img.shields.io/badge/Python-Análisis_de_Datos-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/OEE-Indicadores%20Productivos-7C3AED?style=flat-square"/>
+  <img src="https://img.shields.io/badge/OEE-Indicadores_Productivos-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Excel-Cálculo%20Financiero-0e0525?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Excel-Análisis_Financiero-000000?style=flat-square"/>
 </p>
 
-# ulogix-data-finance · Datos, OEE y Análisis Financiero
+# ulogix-data-finance
 
-Repositorio de análisis productivo y evaluación económica del proyecto. Abarca el cálculo de indicadores de desempeño (OEE, Takt time, MLT), simulación de producción, análisis financiero (VPN, TIR, flujo de caja) y desarrollo de dashboards con Power BI.
+Repositorio de análisis productivo y evaluación económica. Abarca el cálculo de indicadores de desempeño (OEE, Takt time, MLT), simulación de producción, análisis financiero (VPN, TIR, flujo de caja) y dashboards MES con Power BI.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 📁 Estructura del Repositorio
+## Estructura
 
 ```
 ulogix-data-finance/
-│
-├── oee/                        # Overall Equipment Effectiveness
-│   ├── calculo-oee.xlsx        # Hojas de cálculo OEE por línea/producto
-│   ├── scripts/                # Scripts Python de análisis OEE
-│   └── README.md
-│
-├── tiempos/                    # Análisis de tiempos de producción
-│   ├── takt-time/              # Cálculo Takt time por producto
-│   ├── setup-tiempos/          # Tiempos de set-up y cambio de producto
-│   ├── mlt/                    # Manufacturing Lead Time
-│   └── README.md
-│
-├── simulacion/                 # Simulación del sistema productivo
-│   ├── modelos/                # Modelos de simulación
-│   ├── resultados/             # Outputs y análisis comparativo
-│   └── README.md
-│
-├── financiero/                 # Análisis económico del proyecto
-│   ├── presupuesto/            # EDT y presupuesto por módulo
-│   ├── flujo-caja/             # Proyecciones de flujo de caja
-│   ├── indicadores/            # VPN, TIR, payback
-│   ├── propuesta-valor/        # Oferta comercial y diferencial
-│   └── README.md
-│
-├── power-bi/                   # Dashboards MES con Power BI
-│   ├── reportes/               # Archivos .pbix
-│   ├── datasets/               # Fuentes de datos
-│   └── README.md
-│
-└── reportes/                   # Informes consolidados
-    └── README.md
+├── oee/              OEE por línea y producto, scripts Python
+├── tiempos/          Takt time, tiempos de setup, MLT
+├── simulacion/       Modelos de simulación, análisis comparativo
+├── financiero/       EDT, presupuesto, flujo de caja, VPN/TIR
+├── power-bi/         Dashboards MES (.pbix) y datasets
+└── reportes/         Informes consolidados
 ```
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 📊 Indicadores Clave
+## Indicadores Clave
 
 | Indicador | Descripción | Herramienta |
 |---|---|---|
-| **OEE** | Overall Equipment Effectiveness (Disponibilidad × Rendimiento × Calidad) | Excel / Python |
-| **Takt Time** | Ritmo de producción requerido por demanda | Excel |
+| **OEE** | Disponibilidad × Rendimiento × Calidad | Excel / Python |
+| **Takt Time** | Ritmo de producción requerido | Excel |
 | **MLT** | Manufacturing Lead Time | Simulación |
-| **VSM** | Value Stream Mapping antes/después | Draw.io |
-| **VPN** | Valor Presente Neto del proyecto | Excel |
+| **VPN** | Valor Presente Neto | Excel |
 | **TIR** | Tasa Interna de Retorno | Excel |
-| **Payback** | Periodo de recuperación de inversión | Excel |
+| **Payback** | Periodo de recuperación | Excel |
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 🏭 Productos Analizados
+## Productos Analizados
 
 | Producto | Línea | Volumen | OEE Objetivo |
 |---|---|---|---|
-| Agua purificada | Línea 2 | 600 mL BM | ≥ 85% |
-| Bebida energética | Línea 3 | 2 L MV | ≥ 80% |
-| Jugo natural | Línea 7 | 20 L GV | ≥ 75% |
+| Agua purificada | Línea 2 | 600 mL | ≥ 85% |
+| Bebida energética | Línea 3 | 2 L | ≥ 80% |
+| Jugo natural | Línea 7 | 20 L | ≥ 75% |
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 👥 Responsables
+## Responsables
 
 | Módulo | Responsable | GitHub |
-|---|---|---|
+|---|---|:---:|
 | Finanzas / Análisis Económico | Samuel David Sanchez Cardenas | [@samsanchezcar](https://github.com/samsanchezcar) |
-| Planeación de Proceso / OEE | Jorge N. Garzón | [@Nicolas-Eule](https://github.com/Nicolas-Eule) |
-| SCADA / MES / Power BI | Juan F. Triana | [@jutrianaa](https://github.com/jutrianaa) |
+| Planeación de Proceso / OEE | Jorge Nicolas Garzón Acevedo | [@Nicolas-Eule](https://github.com/Nicolas-Eule) |
+| SCADA / MES / Power BI | Juan Felipe Triana Aguilera | [@jutrianaa](https://github.com/jutrianaa) |
 
-**Supervisores académicos:** Carlos J. Cortés · Luis M. Méndez · Víctor H. Grisales · Ricardo Ramírez · Ubaldo García · Eduardo Barrera
+**Supervisores:** Carlos J. Cortés · Luis M. Méndez · Víctor H. Grisales · Ricardo Ramírez · Ubaldo García · Eduardo Barrera
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## 🔗 Repositorios Relacionados
+## Repositorios Relacionados
 
 - [ulogix-manufacturing](https://github.com/ulogix-team/ulogix-manufacturing) — Proceso, planta, gemelo digital
-- [ulogix-scada-control](https://github.com/ulogix-team/ulogix-scada-control) — SCADA, datos en tiempo real
-- [ulogix-team.github.io](https://ulogix-team.github.io) — Sitio web del proyecto
+- [ulogix-scada-control](https://github.com/ulogix-team/ulogix-scada-control) — Datos en tiempo real desde SCADA
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

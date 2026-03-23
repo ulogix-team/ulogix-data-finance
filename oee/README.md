@@ -1,8 +1,10 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 
-# 📊 OEE — Overall Equipment Effectiveness
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
+
+# oee — Overall Equipment Effectiveness
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
 Cálculo y análisis del OEE por línea y producto.
 
@@ -14,10 +16,12 @@ OEE = Disponibilidad × Rendimiento × Calidad
 
 ## Contenido esperado
 
-- `calculo-oee.xlsx` — Hoja consolidada con OEE por producto/línea
-- **scripts/** — Scripts Python para cálculo automatizado desde datos SCADA/PLC
+- `calculo-oee.xlsx` — Hoja consolidada con OEE por producto y línea
+- `scripts/` — Scripts Python para cálculo automatizado desde datos SCADA/PLC
 
-## Responsable
+## Responsables
 
-Jorge N. Garzón · [@Nicolas-Eule](https://github.com/Nicolas-Eule)  
-Juan F. Triana · [@jutrianaa](https://github.com/jutrianaa)
+Jorge Nicolas Garzón Acevedo · [@Nicolas-Eule](https://github.com/Nicolas-Eule)  
+Juan Felipe Triana Aguilera · [@jutrianaa](https://github.com/jutrianaa)
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

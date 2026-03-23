@@ -1,16 +1,20 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
-</p>
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 
-# 📈 Power BI — MES Analytics
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 
-Dashboards de Manufacturing Execution System (MES) desarrollados con Power BI, conectados a datos del PLC/SCADA.
+# power-bi — MES Analytics
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
+
+Dashboards de Manufacturing Execution System (MES) con Power BI, conectados a datos del PLC/SCADA.
 
 ## Contenido esperado
 
-- **reportes/** — Archivos `.pbix` con dashboards de producción, calidad y eficiencia
-- **datasets/** — Archivos de datos fuente (`.csv`, `.xlsx`, conectores OPC/SQL)
+- `reportes/` — Archivos `.pbix` con dashboards de producción, calidad y eficiencia
+- `datasets/` — Archivos de datos fuente (`.csv`, `.xlsx`, conectores OPC/SQL)
 
 ## Responsable
 
-Juan F. Triana · [@jutrianaa](https://github.com/jutrianaa)
+Juan Felipe Triana Aguilera · [@jutrianaa](https://github.com/jutrianaa)
+
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
