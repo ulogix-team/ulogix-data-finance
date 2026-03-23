@@ -3,6 +3,10 @@
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/logos/ulogix-icon-transparent-dark.svg" height="55"/>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Power_BI-MES_Analytics-000000?style=flat-square"/>
   &nbsp;
   <img src="https://img.shields.io/badge/Python-Análisis_de_Datos-000000?style=flat-square"/>
@@ -18,17 +22,30 @@ Repositorio de análisis productivo y evaluación económica. Abarca el cálculo
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-## Estructura
+## Módulos
 
-```
-ulogix-data-finance/
-├── oee/          OEE por línea y producto, scripts Python
-├── tiempos/      Takt time, tiempos de setup, MLT
-├── simulacion/   Modelos de simulación, análisis comparativo
-├── financiero/   EDT, presupuesto, flujo de caja, VPN/TIR
-├── power-bi/     Dashboards MES (.pbix) y datasets
-└── reportes/     Informes consolidados
-```
+<table>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>oee/</strong> — OEE por línea y producto · scripts Python de análisis automatizado</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>tiempos/</strong> — Takt time · tiempos de set-up y cambio · Manufacturing Lead Time</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>simulacion/</strong> — Modelos de simulación · análisis comparativo antes/después</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>financiero/</strong> — EDT · flujo de caja · VPN · TIR · propuesta de valor</td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td><strong>power-bi/</strong> — Dashboards MES (.pbix) · datasets desde PLC/SCADA</td>
+</tr>
+</table>
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
