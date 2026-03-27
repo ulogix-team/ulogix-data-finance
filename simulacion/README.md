@@ -14,7 +14,7 @@ Análisis del proceso productivo mediante VSM (Value Stream Mapping) y simulaci�
 |---|---|---|---|---|
 | **Línea 2** | Bebida carbonatada — Vidrio 330 mL | 9.64 h | 6.602 s | Inventarios intermedios moderados, alto peso en preparación e inspección del retornable |
 | **Línea 3** | Bebida PET 1 L–2 L | 12.0 h | 5.61 s | Mayor LT por inventarios acumulados en flujo PET y número de etapas |
-| **Línea 7** | Agua purificada — Garrafón 20 L | 8.4 h | 22.56 s | Menor LT que PET pero mayor VA por unidad — formato 20 L |
+| **Línea 7** | Agua purificada — Garrafón 25 L | 8.4 h | 22.56 s | Menor LT que PET pero mayor VA por unidad — formato 20 L |
 
 **Clave:** LT >> VA en las tres líneas → oportunidad de reducción mediante automatización.
 

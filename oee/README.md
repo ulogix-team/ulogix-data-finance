@@ -6,7 +6,7 @@
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-Cálculo y análisis del OEE por línea y producto. Los valores preliminares provienen del archivo Excel del equipo (taller Módulo 2 — Gestión de Producción).
+Cálculo y análisis del OEE por línea y producto. Los valores del modelo financiero (`modelo_femsa_automatizacion_2026.xlsm`) definen el OEE base como **81%** con objetivo post-automatización de **86%**.
 
 ## Fórmula
 
@@ -14,29 +14,47 @@ Cálculo y análisis del OEE por línea y producto. Los valores preliminares pro
 OEE = Disponibilidad × Eficiencia × Calidad
 ```
 
-## Valores Preliminares (Modelo del Equipo)
+## Valores del Modelo Financiero (Hoja Supuestos)
+
+| Indicador | Valor |
+|---|---|
+| OEE base (hoja Supuestos) | **81,00 %** |
+| OEE objetivo | **86,00 %** |
+| Meta mejora throughput | +11,00 % |
+| Rechazo base | 0,07 % |
+
+## Valores Preliminares (Cálculo de Tiempos — APM)
 
 | Indicador | Valor | Fórmula |
 |---|---|---|
-| Disponibilidad | **89.29 %** | T_real / T_planeado = 6.25 / 7.00 |
-| Eficiencia | **88.17 %** | Vol_real × Tc / T_real |
-| Calidad | **99.93 %** | 1 − (% rechazo) = 1 − 0.07% |
-| **OEE** | **≈ 78.67 %** | 0.8929 × 0.8817 × 0.9993 |
+| Disponibilidad | **89,29 %** | T_real / T_planeado = 6.25 / 7.00 |
+| Eficiencia | **88,17 %** | Vol_real × Tc / T_real |
+| Calidad | **99,93 %** | 1 − (% rechazo) = 1 − 0,07% |
+| **OEE calculado** | **≈ 78,67 %** | 0,8929 × 0,8817 × 0,9993 |
 
-> Referencia de clase mundial: OEE ≥ 85%. La línea de base del 78.67% es el punto de partida para la mejora mediante automatización.
+> Nota: el modelo financiero usa OEE base = 81% (hoja Supuestos), coherente con el promedio de las tres líneas evaluadas.
 
 ## OEE por Línea (Objetivo Post-Automatización)
 
-| Línea | Producto | OEE Objetivo |
-|---|---|---|
-| Línea 2 — 330 mL retornable | Bebida carbonatada vidrio | ≥ 85 % |
-| Línea 3 — PET 1 L–2 L | Bebida carbonatada PET | ≥ 80 % |
-| Línea 7 — Garrafón 20 L | Agua purificada | ≥ 75 % |
+| Línea | Producto | OEE base | OEE Objetivo |
+|---|---|---|---|
+| Línea 2 — 330 mL retornable | Bebida carbonatada vidrio | — | ≥ 86 % |
+| Línea 3 — PET 1.5 L | Bebida carbonatada PET | — | ≥ 86 % |
+| Línea 7 — Garrafón 25 L | Agua purificada | — | ≥ 86 % |
+
+## Nivel de Servicio
+
+| Indicador | Valor |
+|---|---|
+| Nivel de servicio base | 90,00 % |
+| Nivel de servicio proyecto | 99,00 % |
+| Factor monetización uplift comercial | 31,00 % |
+
+> El salto de servicio base→proyecto (90%→99%) no se monetiza al 100%, sino en un 31%, lo que hace el caso financiero más conservador y realista.
 
 ## Contenido esperado
 
-- `calculo-oee.xlsx` — Hoja consolidada con OEE por producto y línea
-- `scripts/` — Scripts Python para cálculo automatizado desde datos SCADA/PLC
+- `scripts/` — Scripts Python para cálculo automatizado desde datos SCADA/PLC (OPC-UA → Power BI)
 
 ## Responsables
 
