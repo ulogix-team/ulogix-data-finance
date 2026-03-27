@@ -128,6 +128,22 @@ Tasa renta corporativa: 35,00 %
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
+
+## Business Model Canvas
+
+| Bloque | Contenido |
+|---|---|
+| **Asociaciones clave** | KRONES, HEUFT, Rockwell, ABB, Siemens, Microsoft Azure, integradores locales, OEM y contratistas de montaje |
+| **Actividades clave** | Ingeniería de detalle, simulación (RobotStudio/NX/Plant Sim), diseño PLC/SCADA/MES/ERP, integración cloud, FAT/SAT, capacitación y analítica OEE |
+| **Recursos clave** | Equipo mecatrónico/automatización, know-how ISA-95, librerías PLC/HMI, BOM sensores y visión, metodología VSM/OEE, relación con OEM |
+| **Propuesta de valor** | Retrofit 3 líneas: +11% throughput · OEE 83%→≥86% · +5% cash flow · trazabilidad MES/Cloud · mantenimiento por confiabilidad |
+| **Relaciones con clientes** | B2B consultiva, acompañamiento implementación, entrenamiento operadores, soporte por KPIs, mejora continua basada en datos |
+| **Canales** | Venta directa B2B, presentación técnica, piloto/PoC, demo digital twin, dashboards ejecutivos, soporte remoto y on-site |
+| **Segmentos de mercado** | Cliente ancla: Coca-Cola FEMSA Fontibón · usuarios internos: operaciones, mantenimiento, calidad, supply chain, TI industrial · escalable a otras plantas |
+| **Estructura de costos** | CAPEX retrofit, sensores, visión, PLC/HMI, cloud, licencias, ingeniería, commissioning, formación, mantenimiento software, ciberseguridad y contingencia |
+| **Fuentes de ingreso** | 1. Integración/retrofit · 2. Ingeniería y digital twin · 3. Soporte analítico/MES/cloud · 4. Upselling mejora continua y mantenimiento predictivo |
+
 ## Tareas por Módulo
 
 <table>
