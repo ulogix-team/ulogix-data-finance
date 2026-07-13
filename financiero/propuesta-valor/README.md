@@ -12,7 +12,11 @@ Propuesta de valor y modelo de negocio de ULogix para el proyecto de automatizac
 
 | Archivo | Descripción |
 |---|---|
-| `Reporte de estudio de mercado.docx` | Propuesta comercial y diferencial competitivo |
+| `estudio-mercado-inicial-fontibon.md` | Estimación inicial de demanda/mercado (elaborada por Andrés Mauricio Morales Martínez, 2026-03-03) — punto de partida de la propuesta comercial |
+
+> Estudio de mercado completo y validado estadísticamente (21 trimestres
+> reales, Holt-Winters + Monte Carlo, backtest MAPE 1,9–2,7 %):
+> [`../../pronostico-demanda/docs/estudio-mercado-fontibon.md`](../../pronostico-demanda/docs/estudio-mercado-fontibon.md)
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 

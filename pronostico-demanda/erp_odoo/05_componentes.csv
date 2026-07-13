@@ -1,0 +1,12 @@
+id,name,default_code,detailed_type,categ_id/id,uom_id/id,uom_po_id/id,sale_ok,purchase_ok,list_price
+__import__.comp_agua,Agua tratada (proceso),MP-AGUA,product,__import__.pcat_mp,__import__.uom_litro,__import__.uom_litro,False,True,0
+__import__.comp_conc_cc,Concentrado Coca-Cola,MP-CONC-CC,product,__import__.pcat_mp,__import__.uom_ml,__import__.uom_ml,False,True,0
+__import__.comp_conc_qt,Concentrado QuAtro toronja,MP-CONC-QT,product,__import__.pcat_mp,__import__.uom_ml,__import__.uom_ml,False,True,0
+__import__.comp_co2,CO2 carbonatacion (g),MP-CO2,product,__import__.pcat_mp,__import__.uom_ml,__import__.uom_ml,False,True,0
+__import__.comp_casco_350,Casco vidrio retornable 350 ml,EMP-CASCO-350,product,__import__.pcat_mp,__import__.uom_bot350,__import__.uom_bot350,False,True,0
+__import__.comp_pet_15,Botella PET 1.5 L,EMP-PET-15,product,__import__.pcat_mp,__import__.uom_bot15,__import__.uom_bot15,False,True,0
+__import__.comp_casco_gf,Casco garrafon retornable 25 L,EMP-CASCO-GF,product,__import__.pcat_mp,__import__.uom_gfn,__import__.uom_gfn,False,True,0
+__import__.comp_tapa_cc,Tapa corona (CC350),EMP-TAPA-CC,product,__import__.pcat_mp,__import__.uom_bot350,__import__.uom_bot350,False,True,0
+__import__.comp_tapa_pet,Tapa rosca PET,EMP-TAPA-PET,product,__import__.pcat_mp,__import__.uom_bot15,__import__.uom_bot15,False,True,0
+__import__.comp_tapa_gf,Tapa garrafon,EMP-TAPA-GF,product,__import__.pcat_mp,__import__.uom_gfn,__import__.uom_gfn,False,True,0
+__import__.comp_etiq_qt,Etiqueta QuAtro 1.5 L,EMP-ETIQ-QT,product,__import__.pcat_mp,__import__.uom_bot15,__import__.uom_bot15,False,True,0

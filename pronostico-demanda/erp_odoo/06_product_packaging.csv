@@ -1,0 +1,9 @@
+id,name,product_id/id,qty,sales,purchase
+__import__.pack_prod_cc_ret_350_30,Cajon x30,__import__.prod_cc_ret_350,30,True,False
+__import__.pack_prod_cc_ret_350_270,Capa (9 cajones),__import__.prod_cc_ret_350,270,True,False
+__import__.pack_prod_cc_ret_350_1620,Pallet (54 cajones),__import__.prod_cc_ret_350,1620,True,False
+__import__.pack_prod_qt_nr_1500_6,Pack x6,__import__.prod_qt_nr_1500,6,True,False
+__import__.pack_prod_qt_nr_1500_168,Capa (28 packs),__import__.prod_qt_nr_1500,168,True,False
+__import__.pack_prod_qt_nr_1500_840,Pallet (140 packs),__import__.prod_qt_nr_1500,840,True,False
+__import__.pack_prod_ag_gf_25_6,Rack x6 (=capa),__import__.prod_ag_gf_25,6,True,False
+__import__.pack_prod_ag_gf_25_30,Pallet (5 racks),__import__.prod_ag_gf_25,30,True,False

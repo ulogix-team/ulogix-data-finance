@@ -8,13 +8,17 @@
 
 Evaluación técnico-económica del retrofit brownfield para FEMSA Fontibón. El modelo cubre 60 meses desde 2026-04-01 con 4 meses preoperativos, 3 turnos y continuidad operativa durante la implementación.
 
+La demanda base de 159.000.000 L/año y el detalle de mix por producto se
+respaldan con el pronóstico estadístico completo (Holt-Winters + Monte Carlo
+sobre 21 trimestres reales) en [`../pronostico-demanda/`](../pronostico-demanda/README.md).
+
 ## Archivos
 
 | Archivo | Carpeta | Descripción |
 |---|---|---|
 | `modelo_femsa_automatizacion_2026.xlsm` | `flujo-caja/` | Modelo financiero completo (15 hojas) |
 | `Memorias_calculo_consumo.xlsx` | `presupuesto/` | Memorias de cálculo de consumo energético |
-| `Reporte de estudio de mercado.docx` | `propuesta-valor/` | Propuesta de valor y oferta comercial |
+| `estudio-mercado-inicial-fontibon.md` | `propuesta-valor/` | Estimación inicial de demanda/mercado (versión de arranque) |
 
 ## Resultados del Modelo (`modelo_femsa_automatizacion_2026.xlsm`)
 

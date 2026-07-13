@@ -1,0 +1,6 @@
+id,name
+__import__.pcat_bebidas,Bebidas
+__import__.pcat_carb_ret,Bebidas / Carbonatadas / Retornable
+__import__.pcat_carb_nr,Bebidas / Carbonatadas / No retornable
+__import__.pcat_agua,Bebidas / Agua / Garrafon
+__import__.pcat_mp,Materias primas y empaques

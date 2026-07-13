@@ -1,0 +1,86 @@
+{
+ "correlacion_categorias": {
+  "refrescos": {
+   "refrescos": 1.0,
+   "agua": 0.869,
+   "garrafon": 0.123,
+   "otros": 0.676
+  },
+  "agua": {
+   "refrescos": 0.869,
+   "agua": 1.0,
+   "garrafon": 0.195,
+   "otros": 0.721
+  },
+  "garrafon": {
+   "refrescos": 0.123,
+   "agua": 0.195,
+   "garrafon": 1.0,
+   "otros": -0.185
+  },
+  "otros": {
+   "refrescos": 0.676,
+   "agua": 0.721,
+   "garrafon": -0.185,
+   "otros": 1.0
+  }
+ },
+ "refrescos": {
+  "rachas": {
+   "rachas": 10,
+   "esperadas": 11.48,
+   "z": -0.663,
+   "p": 0.5076
+  },
+  "kruskal_wallis": {
+   "H": 5.173,
+   "p": 0.27
+  },
+  "levene": {
+   "W": 1.507,
+   "p": 0.2499
+  },
+  "acf_lag4_diff": 0.493,
+  "ljungbox_lag4_p": 0.027915,
+  "estacional": true
+ },
+ "agua": {
+  "rachas": {
+   "rachas": 4,
+   "esperadas": 11.48,
+   "z": -3.356,
+   "p": 0.0008
+  },
+  "kruskal_wallis": {
+   "H": 13.921,
+   "p": 0.0076
+  },
+  "levene": {
+   "W": 5.875,
+   "p": 0.0047
+  },
+  "acf_lag4_diff": 0.252,
+  "ljungbox_lag4_p": 0.456111,
+  "estacional": false
+ },
+ "garrafon": {
+  "rachas": {
+   "rachas": 10,
+   "esperadas": 11.48,
+   "z": -0.663,
+   "p": 0.5076
+  },
+  "kruskal_wallis": {
+   "H": 14.221,
+   "p": 0.0066
+  },
+  "levene": {
+   "W": 0.103,
+   "p": 0.9798
+  },
+  "acf_lag4_diff": 0.039,
+  "ljungbox_lag4_p": 0.64177,
+  "estacional": false
+ },
+ "conclusion": "Serie trimestral REAL (21 obs.): sobre la serie DIFERENCIADA (sin tendencia), el ACF en rezago 4 es significativo -> estacionalidad anual confirmada con datos observados. Kruskal-Wallis detecta diferencias de nivel entre anios (crecimiento 2021-2024, quiebre 2025). Ruta del diagrama: Holt-Winters multiplicativo, m=4 (trimestral)."
+}

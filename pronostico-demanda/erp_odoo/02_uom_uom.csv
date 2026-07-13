@@ -1,0 +1,14 @@
+id,name,category_id/id,uom_type,factor_inv,factor
+__import__.uom_bot350,Botella 350 ml,__import__.uomcat_cc350,reference,,1
+__import__.uom_cajon30,Cajon x30 (CC350),__import__.uomcat_cc350,bigger,30,
+__import__.uom_capa_cc,Capa 9 cajones (CC350),__import__.uomcat_cc350,bigger,270,
+__import__.uom_pallet_cc,Pallet 54 cajones (CC350),__import__.uomcat_cc350,bigger,1620,
+__import__.uom_bot15,Botella 1.5 L,__import__.uomcat_qt15,reference,,1
+__import__.uom_pack6,Pack x6 (QT1.5),__import__.uomcat_qt15,bigger,6,
+__import__.uom_capa_qt,Capa 28 packs (QT1.5),__import__.uomcat_qt15,bigger,168,
+__import__.uom_pallet_qt,Pallet 140 packs (QT1.5),__import__.uomcat_qt15,bigger,840,
+__import__.uom_gfn,Garrafon 25 L,__import__.uomcat_gf25,reference,,1
+__import__.uom_rack6,Rack x6 (=capa),__import__.uomcat_gf25,bigger,6,
+__import__.uom_pallet_gf,Pallet 5 racks (Garrafon),__import__.uomcat_gf25,bigger,30,
+__import__.uom_litro,Litro (proceso),__import__.uomcat_liq,reference,,1
+__import__.uom_ml,Mililitro (proceso),__import__.uomcat_liq,smaller,,1000

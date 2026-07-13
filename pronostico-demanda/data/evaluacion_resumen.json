@@ -1,0 +1,37 @@
+{
+ "P1": {
+  "MAD": 397729,
+  "CFE": -1591241,
+  "MSE": 304650304880,
+  "RMSE": 551951,
+  "MAPE": 2.72,
+  "TS_final": -4.0,
+  "TS_max_abs": 4.0,
+  "senal_ok": false
+ },
+ "P2": {
+  "MAD": 496328,
+  "CFE": -1985713,
+  "MSE": 474419337918,
+  "RMSE": 688781,
+  "MAPE": 2.72,
+  "TS_final": -4.0,
+  "TS_max_abs": 4.0,
+  "senal_ok": false
+ },
+ "P3_comparacion_MAPE": {
+  "P3_directo": 1.91,
+  "P3_ligado_agua": 7.54,
+  "P3_combinado": 4.58
+ },
+ "P3": {
+  "MAD": 79606,
+  "CFE": -398031,
+  "MSE": 6825542267,
+  "RMSE": 82617,
+  "MAPE": 4.58,
+  "TS_final": -5.0,
+  "TS_max_abs": 5.0,
+  "senal_ok": false
+ }
+}

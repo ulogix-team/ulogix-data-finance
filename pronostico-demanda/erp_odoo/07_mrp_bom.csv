@@ -1,0 +1,4 @@
+id,product_tmpl_id/id,product_qty,type,code
+__import__.bom_prod_cc_ret_350,__import__.prod_cc_ret_350,1,normal,LdM-CC-RET-350
+__import__.bom_prod_qt_nr_1500,__import__.prod_qt_nr_1500,1,normal,LdM-QT-NR-1500
+__import__.bom_prod_ag_gf_25,__import__.prod_ag_gf_25,1,normal,LdM-AG-GF-25000

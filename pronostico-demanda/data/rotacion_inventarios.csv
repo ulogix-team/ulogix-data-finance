@@ -1,0 +1,4 @@
+producto,nombre,unidades_por_pallet,litros_por_pallet,demanda_anual_und,demanda_anual_pallets,lote_turno_pallets,rotacion_turno,cobertura_turno_dias,lote_dia_2turnos_pallets,rotacion_dia_2turnos,cobertura_dia_2turnos_dias,lote_semanal_pallets,rotacion_semanal,cobertura_semanal_dias
+P1,Coca-Cola 350 ml Vidrio Retornable,1620,567.0,186953224,115409,162,1424.7,0.26,324,712.4,0.51,1944,118.7,3.07
+P2,QuAtro Toronja 1.5 L PET NR,840,1260.0,54436369,64812,87,1489.8,0.25,174,744.9,0.49,1044,124.1,2.94
+P3,Garrafon Agua 25 L Retornable,30,750.0,277572,9259,96,192.8,1.89,192,96.4,3.79,1152,16.1,22.72

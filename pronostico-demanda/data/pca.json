@@ -1,0 +1,34 @@
+{
+ "varianza_explicada": [
+  0.6297,
+  0.275,
+  0.0662,
+  0.0291
+ ],
+ "correlacion": {
+  "refrescos": {
+   "refrescos": 1.0,
+   "agua": 0.869,
+   "garrafon": 0.123,
+   "otros": 0.676
+  },
+  "agua": {
+   "refrescos": 0.869,
+   "agua": 1.0,
+   "garrafon": 0.195,
+   "otros": 0.721
+  },
+  "garrafon": {
+   "refrescos": 0.123,
+   "agua": 0.195,
+   "garrafon": 1.0,
+   "otros": -0.185
+  },
+  "otros": {
+   "refrescos": 0.676,
+   "agua": 0.721,
+   "garrafon": -0.185,
+   "otros": 1.0
+  }
+ }
+}

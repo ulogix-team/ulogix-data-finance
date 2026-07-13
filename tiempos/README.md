@@ -13,6 +13,7 @@ Cálculo y análisis de tiempos del proceso para evaluación productiva. Módulo
 | Archivo | Carpeta | Descripción |
 |---|---|---|
 | `Calculo de tiempos - APM .xlsx` | `setup-tiempos/` | Cálculo de tiempos de ciclo, setup y OEE por línea |
+| `Tiempos_Fontibon_Corregido.xlsx` | `fontibon-lotes-oee/` | OEE bottom-up por línea (L1/L2/L3) y dimensionamiento de lotes de un turno, ligado al pronóstico de `pronostico-demanda/` — ver `fontibon-lotes-oee/README.md` |
 
 ## Tiempos de Ciclo y Capacidades por Línea
 
@@ -45,14 +46,34 @@ Crecimiento anual demanda: 1,50 %
 Stock de seguridad objetivo: 5,00 %
 ```
 
+## OEE bottom-up y lotes (`fontibon-lotes-oee/`)
+
+Análisis complementario, construido desde datos de visita técnica y ligado al
+pronóstico de demanda (`pronostico-demanda/`): lote = producción de UN TURNO
+de 8 h (L1: 162 pallets · L2: 87 · L3: 96). OEE bottom-up por línea (77,1 % /
+76,5 % / 75,4 %, validado contra el 75–78 % observado en visita). Estación
+crítica de L3: paletizado MANUAL de garrafones de 25 kg (480 gfn/h con 2
+operarios; con 1 operario, infactible). L1 y L2 ya están sobre-utilizadas en
+2025 con 2 turnos → sustenta la necesidad de un 3.er turno. Detalle completo
+en `fontibon-lotes-oee/README.md` y en
+`../pronostico-demanda/docs/reporte-integral-fontibon.md` (sección VII).
+
 ## Contenido esperado
 
-- `setup-tiempos/` — `Calculo de tiempos - APM .xlsx` ✅
+- `setup-tiempos/` — `Calculo de tiempos - APM .xlsx` ✅ (VSM / Takt, líneas 2/3/7)
+- `fontibon-lotes-oee/` — `Tiempos_Fontibon_Corregido.xlsx` ✅ (OEE bottom-up / lotes, líneas L1/L2/L3)
 - `takt-time/` — Cálculo del Takt time por producto según demanda
 - `mlt/` — Manufacturing Lead Time por línea (antes/después de automatización)
 
-## Responsable
+> Nota: `setup-tiempos/` (VSM, líneas 2/3/7) y `fontibon-lotes-oee/` (OEE
+> bottom-up, líneas L1/L2/L3) son dos análisis de tiempos independientes sobre
+> la misma planta, con nomenclaturas de línea propias de cada levantamiento;
+> pendiente de conciliar en una única numeración de línea en una iteración
+> futura.
 
-Jorge Nicolas Garzón Acevedo · [@Nicolas-Eule](https://github.com/Nicolas-Eule)
+## Responsables
+
+Jorge Nicolas Garzón Acevedo · [@Nicolas-Eule](https://github.com/Nicolas-Eule) — VSM / Takt / setup-tiempos
+Samuel David Sanchez Cardenas · [@samsanchezcar](https://github.com/samsanchezcar) — OEE bottom-up / fontibon-lotes-oee
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

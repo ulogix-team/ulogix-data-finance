@@ -9,7 +9,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Power_BI-MES_Analytics-000000?style=flat-square"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Python-Analítica_PLC-000000?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Python-Pron%C3%B3stico_Demanda-000000?style=flat-square"/>
   &nbsp;
   <img src="https://img.shields.io/badge/OEE-81%25_%E2%86%92_86%25-000000?style=flat-square"/>
   &nbsp;
@@ -23,9 +23,9 @@
 # ulogix-data-finance
 
 Repositorio técnico-financiero del proyecto de automatización brownfield para **FEMSA Fontibón** — Coca-Cola FEMSA.
-Cubre: **Gestión y Evaluación de Producción**, **Planeación de Proyectos**, **MES / Valor Agregado** y **Cuadro Resumen**.
+Cubre: **Pronóstico de demanda**, **Gestión y Evaluación de Producción (tiempos/OEE)**, **Planeación de Proyectos (finanzas)**, **MES / Valor Agregado** y **Cuadro Resumen**.
 
-> Archivo base del modelo: `modelo_femsa_automatizacion_2026.xlsm` — reporte detallado: `reporte_detallado_version_adjunta_femsa.pdf`
+> Base cuantitativa: `pronostico-demanda/` (21 trimestres reales, Holt-Winters + Monte Carlo) · modelo financiero: `financiero/flujo-caja/modelo_femsa_automatizacion_2026.xlsm` · reporte consolidado: `reportes/reporte_detallado_version_adjunta_femsa.pdf`
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
@@ -33,27 +33,51 @@ Cubre: **Gestión y Evaluación de Producción**, **Planeación de Proyectos**, 
 
 ```
 ulogix-data-finance/
+├── pronostico-demanda/       Estudio de mercado y pronóstico de demanda (pipeline reproducible)
+│   ├── data/                 CSV/JSON: históricos, pruebas estadísticas, pronóstico, Monte Carlo, escenarios
+│   ├── scripts/               00→14: extracción, estadística, Holt-Winters, MC, PCA, escenarios, QA
+│   ├── figuras/               10 figuras (metodología, ACF, PCA, distribuciones...)
+│   ├── referencias/           17 PDFs fuente (reportes trimestrales KOF) + extractos citables
+│   ├── erp_odoo/              9 CSVs de importación Odoo + guía de configuración
+│   ├── docs/                  Reportes técnicos en Markdown (estudio de mercado, reporte integral)
+│   ├── Pipeline_Fontibon.ipynb  notebook guiado del pipeline
+│   └── Modelo_Fontibon_Operativo.xlsx  libro con fórmulas (SKUs→pronóstico→lotes→rotación)
 ├── financiero/
 │   ├── flujo-caja/           modelo_femsa_automatizacion_2026.xlsm
 │   ├── presupuesto/          Memorias_calculo_consumo.xlsx
 │   ├── indicadores/          VPN · TIR · Payback
-│   └── propuesta-valor/      Reporte de estudio de mercado.docx
-├── oee/                      OEE base 81% → objetivo 86% · scripts Python
-│   └── scripts/
+│   └── propuesta-valor/      Business Model Canvas + estudio de mercado inicial
+├── tiempos/                   OEE base 81% → objetivo 86% · VSM · lotes
+│   ├── setup-tiempos/         VSM / Takt time (líneas 2/3/7)
+│   └── fontibon-lotes-oee/    OEE bottom-up y dimensionamiento de lotes (líneas L1/L2/L3)
+├── oee/                       Analítica Python desde PLC (scripts)
 ├── power-bi/
-│   ├── datasets/             Fuentes OPC/SQL desde Ignition/SCADA
-│   └── reportes/             Dashboards .pbix
+│   ├── datasets/               Fuentes OPC/SQL desde Ignition/SCADA
+│   └── reportes/               Dashboards .pbix
 ├── simulacion/
-│   ├── modelos/              Tecnomatix · Plant Simulation
-│   └── resultados/           VSM actual / futuro por línea
-├── tiempos/
-│   ├── setup-tiempos/        Calculo de tiempos - APM .xlsx
-│   ├── takt-time/            Takt time por producto
-│   └── mlt/                  Manufacturing Lead Time por línea
-└── reportes/                 reporte_detallado_version_adjunta_femsa.pdf · cuadro resumen
+│   ├── modelos/                 Tecnomatix · Plant Simulation
+│   └── resultados/               VSM actual / futuro por línea
+└── reportes/                   reporte_detallado_version_adjunta_femsa.pdf · cuadro resumen
 ```
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
+
+## Pronóstico de Demanda (Base Cuantitativa)
+
+`pronostico-demanda/` reconstruye y pronostica la demanda de tres productos
+(Coca-Cola 350 mL retornable, QuAtro 1.5 L NR, Garrafón 25 L) a partir de
+**21 trimestres reales** de Coca-Cola FEMSA Colombia (1T-2021 a 1T-2026),
+extraídos de los 17 Reportes de Resultados Trimestrales oficiales. Pipeline:
+correlación → rachas → Kruskal-Wallis → Levene → ACF → **Holt-Winters
+multiplicativo amortiguado** → validación (backtest MAPE 1,9–2,7 %, un-paso
++0,07 %/+0,47 %) → **Monte Carlo** (10.000 réplicas) → plan de lotes/pallets →
+bases ERP Odoo. Ver [`pronostico-demanda/README.md`](pronostico-demanda/README.md).
+
+| Prod | HW (M L, abr26-mar27) | MC P5–P95 (M L) | Unidades |
+|---|---|---|---|
+| Coca-Cola 350 ret | 65,4 | 61,8–69,4 | 186,9 M |
+| QuAtro 1.5 NR     | 81,6 | 77,2–86,5 | 54,4 M  |
+| Garrafón 25 L     | 7,0  | 6,2–7,8   | 280.912 |
 
 ## Indicadores Financieros Clave (Modelo Base)
 
@@ -128,8 +152,6 @@ Tasa renta corporativa: 35,00 %
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
 
-<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
-
 ## Business Model Canvas
 
 | Bloque | Contenido |
@@ -150,9 +172,18 @@ Tasa renta corporativa: 35,00 %
 <tr>
   <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
   <td>
+    <strong>pronostico-demanda/</strong> — Base cuantitativa de demanda<br/>
+    • Reconstrucción de demanda desde 21 trimestres reales KOF Colombia · Holt-Winters amortiguado · Monte Carlo — S. Sanchez<br/>
+    • Backtest MAPE 1,9–2,7 % · validación un-paso 1T-2026 · análisis multivariado (PCA)<br/>
+    • Plan de lotes/pallets y bases de importación ERP Odoo
+  </td>
+</tr>
+<tr>
+  <td align="center"><img src="https://raw.githubusercontent.com/ulogix-team/assets/main/icons/node-tech.svg" width="50"/></td>
+  <td>
     <strong>simulacion/ + tiempos/</strong> — Módulo 2 · Gestión de Producción (Mar 19–21)<br/>
-    • VSM estado actual: L2 (LT=9.64h, VA=6.602s) · L3 (LT=12h, VA=5.61s) · L7 (LT=8.4h, VA=22.56s)<br/>
-    • VSM estado futuro (post-automatización) — J. Garzón<br/>
+    • VSM estado actual: L2 (LT=9.64h, VA=6.602s) · L3 (LT=12h, VA=5.61s) · L7 (LT=8.4h, VA=22.56s) — J. Garzón<br/>
+    • OEE bottom-up y lotes de un turno (L1/L2/L3) ligado al pronóstico — S. Sanchez<br/>
     • Simulación Tecnomatix / Plant Simulation (Mar 21) — S. Sanchez / J. Garzón<br/>
     • Takt time · MLT · análisis comparativo antes/después
   </td>
@@ -193,7 +224,7 @@ Tasa renta corporativa: 35,00 %
 
 | Módulo | Responsable | GitHub |
 |---|---|:---:|
-| **Finanzas · EDT · GitHub/Docs · MES Power BI** | **Samuel David Sanchez Cardenas** | [@samsanchezcar](https://github.com/samsanchezcar) |
+| **Pronóstico de demanda · Finanzas · EDT · GitHub/Docs · MES Power BI** | **Samuel David Sanchez Cardenas** | [@samsanchezcar](https://github.com/samsanchezcar) |
 | VSM / OEE / Proceso / Simulación | Jorge Nicolas Garzón Acevedo | [@Nicolas-Eule](https://github.com/Nicolas-Eule) |
 | SCADA / Python Analytics | Juan Felipe Triana Aguilera | [@jutrianaa](https://github.com/jutrianaa) |
 
@@ -207,5 +238,16 @@ Tasa renta corporativa: 35,00 %
 main ──────────────────► producción estable
   └── develop ─────────► integración y desarrollo
 ```
+
+## Nota sobre el uso de IA
+
+La reorganización, documentación y consolidación de este repositorio
+(estructura de carpetas, README de cada módulo, y conversión de los reportes
+de Word a Markdown) se realizó con la asistencia de **Claude (Anthropic)**
+bajo la dirección de Samuel David Sanchez Cardenas. Claude se usó como
+herramienta de apoyo para organizar y documentar el trabajo ya desarrollado
+por el equipo; **no figura ni debe figurar como colaborador o autor** del
+repositorio ni del proyecto — toda la autoría del contenido técnico
+corresponde al equipo listado en «Responsables».
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

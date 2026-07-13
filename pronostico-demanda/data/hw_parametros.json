@@ -1,0 +1,31 @@
+{
+ "P1": {
+  "alpha": 0.9456,
+  "beta": 0.0,
+  "gamma": 0.0,
+  "phi": 0.988,
+  "AIC": 569.4
+ },
+ "P2": {
+  "alpha": 0.9456,
+  "beta": 0.0,
+  "gamma": 0.0,
+  "phi": 0.988,
+  "AIC": 578.7
+ },
+ "P3": {
+  "metodo": "combinacion 50/50 (Bates-Granger)",
+  "directo": {
+   "alpha": 1.0,
+   "phi": 0.8
+  },
+  "ligado_agua": {
+   "alpha_W": 0.0631,
+   "beta_W": 0.0,
+   "gamma_W": 0.0,
+   "phi_W": 0.8067,
+   "alpha_s": 1.0,
+   "share_fcst": 0.2535
+  }
+ }
+}
