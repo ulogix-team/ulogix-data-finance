@@ -1,79 +1,24 @@
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 
-<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-dark.svg" width="100%"/>
+# Tiempos, OEE y capacidad
 
-# tiempos — Análisis de Tiempos de Producción
+La nomenclatura canónica del proyecto es **L1/L2/L3**. El levantamiento histórico con líneas 2/3/7 se conserva únicamente como insumo; la hoja `Tiempos` del libro vivo es la consolidación vigente.
 
-<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/dividers/divider-section-dark.svg" width="100%"/>
+| Línea | Producto | MLT antes | OEE antes | OEE después | Capacidad antes | Capacidad después | Dictamen |
+|---|---|---:|---:|---:|---:|---:|---|
+| L1 | Coca-Cola 350 ml vidrio | 16,98 h | 77,12 % | 80,97 % | 149,97 M u/año | 244,55 M u/año | Factible con 3 turnos |
+| L2 | QuAtro 1.5 L PET | 19,26 h | 76,50 % | 80,32 % | 42,01 M u/año | 99,24 M u/año | Factible con 3 turnos |
+| L3 | Garrafón 25 L | 15,57 h | 75,37 % | 79,14 % | 347.309 u/año | 455.843 u/año | Factible con 1 turno |
 
-Cálculo y análisis de tiempos del proceso para evaluación productiva. Módulo 2 — Gestión y Evaluación de la Producción Automatizada.
+La capacidad después combina equipo, turnos y OEE; no se obtiene multiplicando la capacidad anterior solo por 1,05. Asimismo, `t_ciclo_ideal`, `t_ciclo` y takt son magnitudes distintas.
 
 ## Archivos
 
-| Archivo | Carpeta | Descripción |
-|---|---|---|
-| `Calculo de tiempos - APM .xlsx` | `setup-tiempos/` | Cálculo de tiempos de ciclo, setup y OEE por línea |
-| `Tiempos_Fontibon_Corregido.xlsx` | `fontibon-lotes-oee/` | OEE bottom-up por línea (L1/L2/L3) y dimensionamiento de lotes de un turno, ligado al pronóstico de `pronostico-demanda/` — ver `fontibon-lotes-oee/README.md` |
+| Archivo | Uso |
+|---|---|
+| `fontibon-lotes-oee/Tiempos_Fontibon_Corregido.xlsx` | Auditoría bottom-up, lotes, MLT y máquinas por L1/L2/L3 |
+| `setup-tiempos/Calculo de tiempos - APM .xlsx` | Levantamiento histórico, conservado como evidencia |
 
-## Tiempos de Ciclo y Capacidades por Línea
-
-| Parámetro | Línea 2 (330 mL) | Línea 3 (PET 1.5 L) | Línea 7 (25 L) | Unidad |
-|---|---|---|---|---|
-| **Tc adoptado** | **0.072** | **0.420** | **2.520** | s/u |
-| Rp por hora | 50.000 | 8.571 | 1.429 | u/h |
-| Rp por minuto | 833,33 | 142,86 | 23,81 | u/min |
-| Capacidad base (u/mes) | 28.350.000 | 8.100.000 | 405.000 | u/mes |
-| Capacidad proyecto (u/mes) | 34.965.000 | 9.990.000 | 499.500 | u/mes |
-
-> La Línea 2 tiene la mayor cadencia instantánea → referencia más exigente en sincronización. La Línea 7 tiene el mayor Tc por unidad → coherente con garrafón 25 L.
-
-## VSM — Lead Time vs Valor Agregado
-
-| Línea | Producto | Lead Time (LT) | Valor Agregado (VA) |
-|---|---|---|---|
-| Línea 2 | 330 mL retornable | 9.64 h | 6.602 s |
-| Línea 3 | PET 1.5 L | 12.0 h | 5.61 s |
-| Línea 7 | Garrafón 25 L | 8.4 h | 22.56 s |
-
-**LT >> VA** en las tres líneas → oportunidad de reducción mediante automatización brownfield.
-
-## Takt Time (referencia modelo)
-
-```
-Takt Time = Tiempo disponible / Demanda
-Demanda mensual base: 13.250.000 L/mes
-Crecimiento anual demanda: 1,50 %
-Stock de seguridad objetivo: 5,00 %
-```
-
-## OEE bottom-up y lotes (`fontibon-lotes-oee/`)
-
-Análisis complementario, construido desde datos de visita técnica y ligado al
-pronóstico de demanda (`pronostico-demanda/`): lote = producción de UN TURNO
-de 8 h (L1: 162 pallets · L2: 87 · L3: 96). OEE bottom-up por línea (77,1 % /
-76,5 % / 75,4 %, validado contra el 75–78 % observado en visita). Estación
-crítica de L3: paletizado MANUAL de garrafones de 25 kg (480 gfn/h con 2
-operarios; con 1 operario, infactible). L1 y L2 ya están sobre-utilizadas en
-2025 con 2 turnos → sustenta la necesidad de un 3.er turno. Detalle completo
-en `fontibon-lotes-oee/README.md` y en
-`../pronostico-demanda/docs/reporte-integral-fontibon.md` (sección VII).
-
-## Contenido esperado
-
-- `setup-tiempos/` — `Calculo de tiempos - APM .xlsx` ✅ (VSM / Takt, líneas 2/3/7)
-- `fontibon-lotes-oee/` — `Tiempos_Fontibon_Corregido.xlsx` ✅ (OEE bottom-up / lotes, líneas L1/L2/L3)
-- `takt-time/` — Cálculo del Takt time por producto según demanda
-- `mlt/` — Manufacturing Lead Time por línea (antes/después de automatización)
-
-> Nota: `setup-tiempos/` (VSM, líneas 2/3/7) y `fontibon-lotes-oee/` (OEE
-> bottom-up, líneas L1/L2/L3) son dos análisis de tiempos independientes sobre
-> la misma planta, con nomenclaturas de línea propias de cada levantamiento;
-> pendiente de conciliar en una única numeración de línea en una iteración
-> futura.
-
-## Responsables
-
-Jorge Nicolas Garzón Acevedo · [@Nicolas-Eule](https://github.com/Nicolas-Eule) — VSM / Takt / setup-tiempos
-Samuel David Sanchez Cardenas · [@samsanchezcar](https://github.com/samsanchezcar) — OEE bottom-up / fontibon-lotes-oee
+La mejora +5 % relativa se completa al cierre del mes 4 de preoperación; la meta ≥86 % corresponde a etapas posteriores.
 
 <img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>

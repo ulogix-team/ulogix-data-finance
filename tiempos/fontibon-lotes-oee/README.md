@@ -1,24 +1,15 @@
-# fontibon-lotes-oee
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/header-dark.svg" width="100%"/>
 
-`Tiempos_Fontibon_Corregido.xlsx` — OEE bottom-up por línea (L1/L2/L3) y
-dimensionamiento de lotes, construido desde datos de una visita técnica y
-ligado al pronóstico de demanda de `pronostico-demanda/` (las cantidades
-mensuales por SKU se convierten aquí en pallets y lotes de un turno).
+# Tiempos Fontibón corregido
 
-## Resumen
+`Tiempos_Fontibon_Corregido.xlsx` es la memoria de ingeniería que sustenta la consolidación de la hoja `Tiempos`: metodología, ocho correcciones de auditoría, parámetros por línea, MLT/VSM estación por estación, OEE bottom-up, capacidad frente a demanda, referencias comerciales y glosario.
 
-- **Lote** = producción de UN TURNO de 8 h. L1: 162 pallets · L2: 87 · L3: 96.
-- **OEE bottom-up por línea**: 77,1 % (L1) / 76,5 % (L2) / 75,4 % (L3),
-  validado contra el 75–78 % observado en visita.
-- **Estación crítica de L3**: paletizado MANUAL de garrafones de 25 kg
-  (480 gfn/h con 2 operarios; con 1 operario resulta infactible).
-- **Capacidad**: L1 y L2 ya operan sobre-utilizadas en 2025 con 2 turnos →
-  sustenta la necesidad de un 3.er turno.
+| Línea | Lote de un turno | Pallets | MLT | OEE base |
+|---|---:|---:|---:|---:|
+| L1 | 262.440 u | 162 | 16,98 h | 77,12 % |
+| L2 | 73.080 u | 87 | 19,26 h | 76,50 % |
+| L3 | 2.880 garrafones | 96 | 15,57 h | 75,37 % |
 
-Desarrollo completo, fórmulas y supuestos en
-`../../pronostico-demanda/docs/reporte-integral-fontibon.md` (sección VII,
-"Tiempos, OEE y TEEP").
+La mejora financiada es +5 % relativo exacto por línea. Para la factibilidad completa, L1 y L2 operan con tres turnos después de la inversión; L3 conserva un turno y automatiza su cuello de botella de paletizado.
 
-> Nomenclatura de línea (L1/L2/L3) propia de este levantamiento; distinta de
-> la numeración de línea 2/3/7 usada en `../setup-tiempos/` — ver nota en
-> `../README.md`.
+<img src="https://raw.githubusercontent.com/ulogix-team/assets/main/banners/footer-dark.svg" width="100%"/>
